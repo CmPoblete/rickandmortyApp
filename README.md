@@ -1,2 +1,2 @@
-# rickandmortyApp
-rick and morty wiki with Api
+# Rick and Morty App
+## rick and morty wiki with Api
