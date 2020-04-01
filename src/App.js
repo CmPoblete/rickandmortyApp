@@ -22,7 +22,7 @@ class App extends Component {
     // read actual state of the page
     let page = this.state.page;
     // new page ++, no puede pasar si esta en la ultima pagina
-    if(page == this.state.max_page) return null;
+    if(page === this.state.max_page) return null;
     page ++;
     // refresh state
     this.setState({
@@ -37,7 +37,7 @@ class App extends Component {
     // read actual state of the page
     let page = this.state.page;
     // new page --, no puede retroceder estando en la primera pagina
-    if(page == 1) return null;
+    if(page === 1) return null;
     page --;
     // refresh state
     this.setState({
@@ -68,7 +68,7 @@ class App extends Component {
     const url_episode = `https://rickandmortyapi.com/api/episode/?episode=${filter}`;
 
     // console.log(url);
-    if (filter == "character"){
+    if (filter === "character"){
     fetch(url)
     .then(response => response.json())
     .then(result => this.setState({ characters : result.results , max_page : result.info.pages }) )
